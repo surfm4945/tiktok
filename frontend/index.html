@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikSave - SaaS Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode</em>
+    </div>
+
+    <main class="container">
+        <div class="card fade-in">
+            <div class="header">
+                <h1>TikSave ⚡</h1>
+                <p>Download high-quality TikTok videos instantly.</p>
+            </div>
+
+            <div class="input-group">
+                <input type="url" id="video-url" placeholder="Paste TikTok URL here (https://...)">
+                <button id="download-btn">Process Video</button>
+            </div>
+
+            <div id="loader" class="hidden">
+                <div class="spinner"></div>
+                <p>Processing your video... this might take a few seconds.</p>
+            </div>
+
+            <div id="toast" class="toast hidden"></div>
+
+            <div id="result-area" class="hidden slide-up">
+                <video id="preview-player" controls preload="metadata"></video>
+                <a id="final-download-btn" class="btn-primary" href="" download>Download Video</a>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
